@@ -140,7 +140,7 @@ require_once "db.php";    // 引入外部文件
 //写：file_put_contents(文件路径,数据)   返回值：是存储数据的字符串长度
 //读：file_get_contents(文件路径)
 
- 
+
 jquery
 
 /* id  $('#')  class  $('.')  标签  $('标签')
@@ -419,6 +419,7 @@ redis
 //git add . 							一次性提交所有的未追踪和已修改的文件到暂存区
 //git commit -m "注释(描述备注信息)"    提交到git仓库并注释
 //git commit -a -m "描述信息" 			可以提交暂存区和已修改的所有文件，但不能提交未追踪的文件
+//git rm --cached 文件名：删除git仓库的该文件，不会删除工作区该文件
 
 
 //github 
@@ -436,8 +437,8 @@ redis
 //git merge login 					把别的分支代码合并过来 如果有冲突手动解决后提交到仓库就好了
 //git branch -d 分支名称    		删除本地仓库分支 需要删除分支，不能处于删除分支上         如果分支代码没有合并到master主干，系统将不能删除分支，若要强行删除分支，可用git branch -D 分支名 强行删除
 
-//git push -u 远程仓库名称 本地分支名称:远程仓库名称    	把分支推送到远程仓
-//git push 远程仓库名称 --delete 远程仓库名称   删除远程仓库
+//git push -u origin login:login   远程仓库名称 本地分支名称:远程仓库名称    	把分支推送到远程仓
+//git push 远程仓库名称 --delete   远程仓库名称   删除远程仓库
 //git remote show origin 			查看远程仓库的所有分支
 //git checkout -b 本地分支名称 		远程仓库名称/远程分支名称   从github下载分支到本地需要重命名项目
 //git checkout 远程分支名称     	从github下载分支到本地不需要重命名项目	 
@@ -466,6 +467,7 @@ redis
 //composer global require laravel/installer
 //命令来安装 Laravel	composer create-project --prefer-dist laravel/laravel laravel "5.5.*"
 //Composer国内全量镜像大全	https://www.php.cn/toutiao-425131.html
+// 可以使用 composer config -l -g 查看所有全局配置
 //查找自己想要的软件包通过composer	推荐：www.packagist.org			eg:captcha验证码安装和使用
 //读取composer.json内容，解析依赖关系，安装依赖包到vendor目录下
 //composer install    命令读取composer.json内容
@@ -479,12 +481,12 @@ redis
 //dd()函数用来打印出给定的变量和结束脚本的运行
 
 // artisan脚本生成控制器  php artisan make:controller index/indexController
-// artisan 生成模型   php artisan make:model usermodel
+//artisan 生成模型   php artisan make:model usermodel
 //生成中间件	命令：php artisan make:middleware 中间件名
 //创建数据迁移   php artisan make:migration create_users_table	   运行迁移 php artisan migrate
 //生成种子文件   php artisan make:seeder UserTableSeeder 
 //php artisan db:seed							     (执行所有种子文件)
-//php artisan db:seed --class= UserTableSeeder       (指定执行哪个种子文件)(推荐)
+//php artisan db:seed --class=UserTableSeeder       (指定执行哪个种子文件)(推荐)
 
 // ->middleware('login');	调用中间件
 
